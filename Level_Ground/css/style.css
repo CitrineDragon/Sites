@@ -1,0 +1,497 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: '.';
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+:root {
+  --mediumBlue: #66768a;
+  --darkBlue: #161f2a;
+  --lightGray: #dbdfe2;
+  --white: #fff;
+  --max-width: 1000px;
+  --accent: #2bd976;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  line-height: 1.5rem;
+}
+
+.wrapper {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.btn {
+  color: var(--darkBlue);
+  padding: 0.5rem 2rem;
+  border: 2px solid var(--darkBlue);
+  border-radius: 3px;
+}
+
+.btn:hover {
+  color: var(--white);
+  background: var(--darkBlue);
+  border: 2px solid var(--accent);
+  border-radius: 3px;
+}
+
+span.transparent {
+  visibility: hidden;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* **************************************************************** */
+/* Header */
+/* **************************************************************** */
+
+header {
+  height: 50px;
+  background: var(--mediumBlue);
+  color: var(--white);
+}
+
+nav {
+  height: 50px;
+  width: 100%;
+  text-align: center;
+}
+
+nav a {
+  color: var(--white);
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.nav-left,
+.nav-center,
+.nav-right {
+  height: 50px;
+  width: 33.33%;
+  float: left;
+}
+
+.nav-left {
+  line-height: 50px;
+}
+
+.nav-left a {
+  float: left;
+  margin-left: 1rem;
+}
+
+.nav-left a:hover {
+  color: var(--accent);
+  transform: scale(1.3);
+}
+
+.nav-center a {
+  text-align: center;
+}
+
+.nav-center img {
+  height: 48px;
+}
+
+.nav-right {
+  position: relative;
+}
+
+.nav-right a {
+  background: var(--white);
+  color: var(--mediumBlue);
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translatey(-50%);
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin-right: 1rem;
+}
+
+.nav-right a:hover {
+  background: var(--accent);
+  color: var(--white);
+  border: 1px solid var(--white);
+  box-shadow: 0 0 0 2px var(--accent);
+}
+
+/* **************************************************************** */
+/* Hero */
+/* **************************************************************** */
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url('https://github.com/CitrineDragon/Images/blob/master/MMA_Main.jpg?raw=true');
+  background-size: cover;
+  background-position: center center;
+  color: var(--white);
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  padding: 10rem 1rem 3rem 1rem;
+  text-align: center;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem 2rem 1rem;
+}
+
+.hero a {
+  color: var(--white);
+}
+
+.hero a:hover {
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  border-radius: 50px;
+  padding: 1rem 1.5rem;
+}
+
+.hero i {
+  font-size: 2rem;
+  position: relative;
+  top: 6px;
+  right: 10px;
+  margin-bottom: 3.5rem;
+}
+
+.hero span {
+  display: block;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--darkBlue);
+  padding-bottom: 1.5rem;
+}
+
+/* **************************************************************** */
+/* Second */
+/* **************************************************************** */
+
+.second {
+  color: var(--darkBlue);
+  text-align: center;
+}
+
+.second h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 0 1rem;
+  margin: 6rem 0 1rem 0;
+}
+
+.second p {
+  width: 100%;
+  padding: 0 1rem;
+  margin: 0 auto 6rem auto;
+}
+
+/* **************************************************************** */
+/* Third */
+/* **************************************************************** */
+
+.third {
+  background: var(--lightGray);
+  color: var(--darkBlue);
+  text-align: center;
+  margin: 0 auto;
+}
+
+.third img {
+  height: 140px;
+  border-radius: 3px;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+  margin: 6rem 0 0 0;
+}
+
+.thirdRight img {
+  margin: 0;
+}
+
+.third h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 0 1rem;
+  margin: 1.5rem 0;
+}
+
+.thirdLeft p {
+  width: 100%;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+.thirdRight p {
+  width: 100%;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+.third a {
+  display: inline-block;
+  margin: 2rem 0 6rem 0;
+}
+
+/* **************************************************************** */
+/* Fourth */
+/* **************************************************************** */
+.fourth {
+  background: var(--white);
+  color: var(--darkBlue);
+  text-align: center;
+  margin: 0 auto;
+}
+
+.fourth h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 0 1rem;
+  margin: 6rem 0 1rem 0;
+}
+
+.fourth p {
+  width: 100%;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+.fourth a {
+  display: inline-block;
+  margin: 2rem 0 6rem 0;
+}
+/* **************************************************************** */
+/* Footer */
+/* **************************************************************** */
+.footer {
+  background: var(--darkBlue);
+  color: var(--white);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.footer a {
+  color: var(--white);
+}
+
+.footer section {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.icons {
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+
+.icons i {
+  padding: 0.5rem 1rem;
+}
+
+.icons i:hover {
+  color: var(--accent);
+  transform: scale(1.5);
+}
+
+.siteMap,
+.contribute {
+  padding-bottom: 1rem;
+}
+
+.siteMap h5,
+.contribute h5 {
+  font-weight: 700;
+  color: var(--mediumBlue);
+  padding-bottom: 0.5rem;
+}
+
+.siteMap a,
+.contribute a {
+  padding: 0 1rem;
+}
+
+.siteMap a:hover,
+.contribute a:hover {
+  color: var(--accent);
+}
+
+.footerRight {
+  padding-bottom: 1rem;
+}
+
+.footerRight h5 {
+  color: var(--white);
+  font-weight: 700;
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+.footerRight p {
+  color: var(--lightGray);
+  line-height: 1;
+}
+
+.footerRight a:hover {
+  color: var(--accent);
+}
+
+.footerBottom {
+  border-top: 2px solid var(--lightGray);
+  padding-top: 1rem;
+}
+
+.footerBottom p {
+  padding: 0 0 0.5rem 0;
+  font-size: small;
+}
+
+.footerBottom img {
+  padding-bottom: 1rem 0;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+@media screen and (max-width: 400px) {
+  .nav-left a + a {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .hero p {
+    width: 80%;
+  }
+
+  .second p {
+    width: 60%;
+  }
+
+  .third section {
+    width: 50%;
+    float: left;
+  }
+
+  .third section p {
+    width: 80%;
+  }
+
+  .thirdRight img {
+    margin: 6rem 0 0 0;
+  }
+
+  .fourth {
+    clear: both;
+  }
+
+  .fourth p {
+    width: 60%;
+  }
+
+  .footer {
+    padding: 0 2rem;
+  }
+
+  .footer section {
+    width: 100%;
+    margin: 0;
+    text-align: unset;
+  }
+
+  .footer section.footerLeft {
+    width: calc(100% - 11.5rem);
+    float: left;
+  }
+
+  .footer section.footerRight {
+    width: 11.5rem;
+    float: right;
+    padding-top: 1rem;
+  }
+
+  section.footerBottom {
+    margin: 0 auto;
+  }
+
+  .bottomLeft {
+    float: left;
+    width: 90%;
+  }
+
+  .bottomRight {
+    float: right;
+    width: 10%;
+    margin: auto 0;
+  }
+
+  div.bottomRight img {
+    position: relative;
+    float: right;
+    top: -10px;
+  }
+
+  .icons {
+    font-size: 1rem;
+    padding: 0;
+  }
+
+  .icons i {
+    padding: 1rem 1rem 1rem 0;
+  }
+
+  .siteMap,
+  .contribute {
+    padding-bottom: 1rem;
+  }
+
+  .siteMap h5,
+  .contribute h5 {
+    font-weight: 700;
+    color: var(--mediumBlue);
+    padding-bottom: 0rem;
+  }
+
+  .siteMap a,
+  .contribute a {
+    display: inline-block;
+    padding: 0.25rem 0.5rem 0 0;
+  }
+}

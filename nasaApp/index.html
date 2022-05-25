@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Your description goes here" />
+    <meta name="keywords" content="one, two, three" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Spaced Out | Daily Space Pics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1 class="title">Spaced Out!</h1>
+    <h2 class="subtitle">Get Your Daily Space Fix!</h2>
+    <section class="searchSection">
+      <input type="date" class="pictureDate" />
+      <button class="pictureSearch btn">Search</button>
+    </section>
+    <button class="lucky btn">Random Picture</button>
+    <section class="mainContainer">
+      <section class="infoContainer">
+        <section class="dateDisplay hidden">
+          <p class="pText">Date: <span class="date"></span></p>
+        </section>
+        <section class="titleDisplay hidden">
+          <p class="pText">Title: <span class="pictureTitle"></span></p>
+        </section>
+      </section>
+      <section class="imageSection">
+        <img
+          src="https://github.com/CitrineDragon/Images/blob/master/nasa-logo-web-rgb.png?raw=true"
+          alt="NASA Logo"
+          class="placeholder"
+        />
+      </section>
+      <section class="explanationDisplay hidden">
+        <p class="pText">
+          Picture Overview: <span class="pictureExplanation"></span>
+        </p>
+      </section>
+    </section>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>

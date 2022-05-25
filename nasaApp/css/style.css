@@ -1,0 +1,205 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --lightBG: #fff;
+  --darkBG: #222;
+  --accentBlue: #0b3d91;
+  --accentBlueBG: hsla(218, 86%, 31%, 0.4);
+  --accentRed: #fc3d21;
+}
+
+/* Clear fix hack */
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+html {
+  display: flex;
+  flex-direction: column;
+  /* background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url('https://github.com/CitrineDragon/Images/blob/master/diego-ph-5LOhydOtTKU-unsplash.jpg?raw=true'); */
+  background-size: cover;
+  background-position: center center;
+  color: var(--darkBG);
+  font-size: 62.5%;
+  font-family: 'Source Sans Pro', sans-serif;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 90rem;
+  align-items: center;
+}
+
+img {
+  width: 100%;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  object-position: center center;
+}
+
+iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  object-position: center center;
+}
+
+h1 {
+  width: 90%;
+  font-size: 8rem;
+  margin: 10rem 0 3rem 0;
+  text-shadow: 0.3rem 0.3rem 0.3rem var(--accentBlueBG);
+  text-align: center;
+}
+
+h2 {
+  width: 90%;
+  font-size: 2.5rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.btn {
+  background: var(--accentBlue);
+  color: white;
+  border: 0.3rem solid transparent;
+  border-radius: 0.3rem;
+  padding: 0 0.5rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #0b3c91da;
+  border: 3px solid transparent;
+  border-radius: 0.5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+.searchSection {
+  display: flex;
+  flex-direction: row;
+  margin: 4rem 0 1rem 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.pictureSearch {
+  margin-left: 0.5rem;
+}
+
+.lucky {
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.imageSection {
+  width: 97%;
+  margin-bottom: 2rem;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  /* background: hsla(255, 100%, 100%, 0.1); */
+  backdrop-filter: blur(10px);
+  max-width: 97%;
+  width: 900px;
+  border-radius: 0.5rem;
+  margin-bottom: 5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.infoContainer {
+  display: flex;
+  width: 97%;
+  flex-direction: row;
+  border-radius: 0.5rem;
+  padding: 0rem;
+  margin: 2rem 0 1rem 0;
+  justify-content: space-between;
+}
+
+.dateDisplay,
+.titleDisplay {
+  margin-bottom: 0.5rem;
+}
+
+.dateDisplay {
+  order: 2;
+}
+
+.pText {
+  font-style: italic;
+}
+
+.explanationDisplay {
+  background: rgba(0, 0, 0, 0.1);
+  width: 97%;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  min-height: 8rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.pText {
+  font-weight: 700;
+  font-style: italic;
+  color: var(--darkBG);
+}
+
+span {
+  color: var(--accentBlue);
+  font-style: normal;
+  font-weight: 400;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+@media (max-width: 600px) {
+  h1 {
+    width: 95%;
+    font-size: 4rem;
+    margin: 10rem auto 2rem auto;
+    text-shadow: 0.3rem 0.3rem 0.3rem var(--accentBlueBG);
+    text-align: center;
+  }
+
+  h2 {
+    width: 95%;
+    font-size: 2rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .infoContainer {
+    flex-direction: column;
+    padding: 0;
+    justify-content: start;
+    text-align: center;
+  }
+}
