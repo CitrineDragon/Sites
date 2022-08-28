@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>MVC Simplified</title>
+  </head>
+  <body>
+    <section class="wrapper">
+      <section class="page">
+        <h1>MVC Simplified</h1>
+        <section id="pageOne">
+          <section class="pageOneContent">
+          <h2>What is MVC?</h2>
+          <p>
+            MVC (Model View Controller) is a code structure paradigm often used
+            on the backend. MVC is commonly used to implement user interfaces,
+            data, and controlling logic. It emphasizes a separation between the
+            software's business logic and display. This "separation of concerns"
+            provides for a better division of labor and improved maintenance.
+          </p>
+          <p>The three core components of the MVC Structure are as follows:</p>
+          <ul>
+            <li><i class="fa-solid fa-database"></i><span>Model: </span>Manages data and business logic.</li>
+            <li><i class="fa-solid fa-tv"></i><span>View: </span>Handles layout and display.</li>
+            <li><i class="fa-solid fa-gamepad"></i></i><span>Controller: </span>Routes commands to the model and view
+              parts.
+            </li>
+          </ul>
+        </section>
+        <section class="pageOneDisplay">
+          <a
+            href="https://github.com/CitrineDragon/Images/blob/master/MVC%20Overview.png?raw=true"
+            target="_blank"
+          >
+            <img
+              src="./images/MVC Overview.png"
+              alt="Overview of a common MVC structure."
+            />
+          </a>
+          <p>Click image to enlarge.</p>
+        </section>
+      </section>
+      </section>
+      <section class="page">
+        <section id="pageTwo">
+          <h2>The MVC Restaurant</h2>
+          <p>Imagine if you will that MVC is a restaurant and let's get a better understanding of how each of the core MVC components work with each other. Each employee at the restaurant has a specific job that only they do which makes it very easy to modify their role or replace them if necessary without affecting any of the other employees.</p>
+          <h3>The Controller</h3>
+          <p>The controller contains logic that updates the model and/or view in response to input from the user.</p>
+          <p>In this regard, the controller would be similar to a waiter or waitress. The controller would take the order from the customer, note any needed adjustments and send the request to the model. The model would fulfill that request and return data. The controller could then send to the received data to the view to render before sending the response to the customer.</p>
+          <h3>The Model</h3>
+          <p>The model defines what data the app should contain. If the state of this data changes, then the model will usually notify the view (so the display can change as needed) and sometimes the controller (if different logic is needed to control the updated view).</p>
+          <p>In our analogy, the model would be similar to the chef. The chef would receive the request from the controller and go to the database to gather all of the necessary ingredients before responding with the prepared order. In our restaurant, the only employee that can interact with the ingredients(database) is the chef which helps maintain a structured and organized database. By default, MVC doesn't required data validation but it is necessary to ensure we have usable data, for this we will discuss "Schema" later. For now you can think of "Schema" as our recipes.</p>
+          <h3>The View</h3>
+          <p>The view defines how the app's data should be displayed.</p>
+          <p>At the restaurant, our view would be the menu. It allows the customer to view the requested data in a structured layout. The menu could provide examples of the recipes from our database.</p>
+        </section>
+      </section>
+      <section class="page">
+        <section id="pageThree">
+          <h2>The Supporting Roles</h2>
+          <p>MVC on it's own adds a lot of structure and usability to our codebase but let me talk about a couple other tools that I use in conjunction with MVC to add additional structure to my code. Let's talk about Mongoose and one of the reasons why it important to me.</p>
+          <h3>What is Mongoose</h3>
+          <p>Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment. Everything in Mongoose starts with a Schema. Each schema maps to a MongoDB collection and defines the shape of the documents within that collection. Mongoose makes it painlessly easy to work with MongoDB database. We can easily structure our database using Schemas and Models, Automate certain things when record is added or updated using Middlewares/Hooks and easily get the data we need by querying our models.</p>
+          <h3>The Importance of Schema</h3>
+          <p>Schema provides the necessary data validation that we need to maintain the integrity of the data in our database. It allows us to reject data that doesn't conform to our specified schema which increases the usability of our data.</p>
+          <p>A Mongoose schema defines the structure of the document, default values, validators, etc., whereas a Mongoose model provides an interface to the database for creating, querying, updating, deleting records, etc.</p>
+        </section>
+      </section>
+    </section>
+  </body>
+</html>
